@@ -9,7 +9,6 @@
         <img th:src="@{/images/{p}(p=${staff.photo})}"
              style="height:100px" alt="user"><hr>
 
-
         Email:
         <b th:text="${staff.id}"></b><hr>
 
@@ -33,5 +32,6 @@
         Salary:
         $<b th:text="${#numbers.formatDecimal(staff.salary, 0, 'COMMA', 2, 'POINT')}"></b><hr>
     </div>
+
 </body>
 </html>

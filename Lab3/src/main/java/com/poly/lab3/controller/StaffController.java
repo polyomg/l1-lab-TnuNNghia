@@ -10,6 +10,7 @@ import java.util.List;
 
 @Controller
 public class StaffController {
+
     // Bài 1: hiển thị chi tiết 1 staff
     @RequestMapping("/staff/detail")
     public String detail(Model model) {
@@ -66,4 +67,5 @@ public class StaffController {
         model.addAttribute("list", list);
         return "list-controls";
     }
+
 }
