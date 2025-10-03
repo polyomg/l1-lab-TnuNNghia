@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bài 1 - OK Form</title>
+</head>
+<body>
+    <h2>Form OK</h2>
+
+    <form action="/ctrl/ok" method="post">
+<!--        <button formmethod="get">OK bạn</button>-->
+        <button>OK 1</button>
+        <button formmethod="get">OK 2</button>
+        <button formaction="/ctrl/ok?x">OK 3</button>
+    </form>
+
+    <hr>
+    <h3>Kết quả:</h3>
+    <p th:text="${msg}">[Chưa có kết quả]</p>
+
+</body>
+</html>
