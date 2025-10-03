@@ -18,10 +18,8 @@ public class ParamController {
             @PathVariable("x") String x,
             @RequestParam("y") String y,
             Model model) {
-
         model.addAttribute("x", x);
         model.addAttribute("y", y);
-
         return "form_bai2";
     }
 }

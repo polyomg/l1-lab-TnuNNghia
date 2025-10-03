@@ -5,26 +5,25 @@
     <title>Staff List</title>
 </head>
 <body>
-<table border="1" style="width:100%">
-    <thead>
-    <tr>
-        <th>Ảnh</th>
-        <th>Email</th>
-        <th>Họ và tên</th>
-        <th>Cấp bậc</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="staff : ${list}">
-        <td>
-            <img th:src="@{/images/{p}(p=${staff.photo})}" style="height:60px" alt="user">
-        </td>
-        <td th:text="${staff.id}"></td>
-        <td th:text="${#strings.capitalizeWords(staff.fullname)}"></td>
-        <td th:text="${staff.level}"></td>
-    </tr>
-    </tbody>
-</table>
-
+    <table border="1" style="width:100%">
+        <thead>
+        <tr>
+            <th>Ảnh</th>
+            <th>Email</th>
+            <th>Họ và tên</th>
+            <th>Cấp bậc</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="staff : ${list}">
+            <td>
+                <img th:src="@{/images/{p}(p=${staff.photo})}" style="height:60px" alt="user">
+            </td>
+            <td th:text="${staff.id}"></td>
+            <td th:text="${#strings.capitalizeWords(staff.fullname)}"></td>
+            <td th:text="${staff.level}"></td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>

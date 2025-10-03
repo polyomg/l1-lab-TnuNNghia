@@ -5,8 +5,6 @@ import com.poly.lab3.model.Staff;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
 import java.util.List;
 
 
@@ -25,8 +23,6 @@ public class StaffController {
         model.addAttribute("staff", staff);
         return "staff-detail";
     }
-
-
     // Bài 2: hiển thị danh sách staff
     @RequestMapping("/staff/list")
     public String list(Model model) {
@@ -70,5 +66,4 @@ public class StaffController {
         model.addAttribute("list", list);
         return "list-controls";
     }
-
 }

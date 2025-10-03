@@ -12,7 +12,6 @@ public class ResultController {
     public String m1() {
         return "a"; // => templates/a.html
     }
-
     @RequestMapping("/b")
     public String m2(Model model) {
         model.addAttribute("message", "I come from b");

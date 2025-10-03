@@ -14,12 +14,10 @@ public class ProductController {
     public String form() {
         return "product/form";
     }
-
     @PostMapping("/product/save3")
     public String save(@ModelAttribute("product") Product product, Model model) {
         // Đưa product ra view
         model.addAttribute("product", product);
         return "product/form";
     }
-
 }

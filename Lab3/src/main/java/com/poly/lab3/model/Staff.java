@@ -24,5 +24,4 @@ public class Staff {
     private Double salary = 12345.6789;
     @Builder.Default
     private Integer level = 0;
-
 }

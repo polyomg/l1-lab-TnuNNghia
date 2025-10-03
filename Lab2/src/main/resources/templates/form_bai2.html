@@ -5,14 +5,13 @@
     <title>Param Form</title>
 </head>
 <body>
-<form action="/param/save/2021" method="post">
-    <input name="y" value="2031">
-    <button>Save</button>
-</form>
-
-<ul>
-    <li th:text="${x}">?x</li>
-    <li th:text="${y}">?y</li>
-</ul>
+    <form action="/param/save/2021" method="post">
+        <input name="y" value="2031">
+        <button>Save</button>
+    </form>
+    <ul>
+        <li th:text="${x}">?x</li>
+        <li th:text="${y}">?y</li>
+    </ul>
 </body>
 </html>
