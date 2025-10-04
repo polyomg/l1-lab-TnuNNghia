@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: view(~{::title}, ~{::content})}">
+<!--Dấu ~{} là cú pháp expression của Thymeleaf để trỏ tới template/fragment.-->
+<!--Cú pháp :: ở đây là local fragment selector — nó chọn phần tử trong trang con mà đang được render (không cần chỉ rõ tên file)-->
+<head>
+    <meta charset="UTF-8"/>
+    <title>Giới Thiệu</title>
+</head>
+<body>
+<article th:fragment="content">
+    <h1 th:text="#{menu.about}">Giới Thiệu</h1>
+    <ul>
+        <li><h3>FPT Polytechnic</h3></li>
+        <li><h3>Thực Học - Thực Nghiệp</h3></li>
+    </ul>
+</article>
+</body>
+</html>
