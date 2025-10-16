@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+    <style>
+        /* Reset mặc định */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px 50px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #2d3436;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: 600;
+            color: #2d3436;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #b2bec3;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #0984e3;
+            box-shadow: 0 0 5px rgba(9,132,227,0.4);
+        }
+
+        .remember {
+            margin-top: 12px;
+            text-align: left;
+            font-size: 14px;
+            color: #636e72;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #74b9ff;
+        }
+
+        hr {
+            margin: 25px 0;
+            border: none;
+            border-top: 1px solid #dfe6e9;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0984e3;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h2>Đăng nhập tài khoản</h2>
+
+    <form action="/account/login" method="post">
+        <label>Tên đăng nhập:</label>
+        <input type="text" name="username" placeholder="Nhập username" required>
+
+        <label>Mật khẩu:</label>
+        <input type="password" name="password" placeholder="Nhập password" required>
+
+        <div class="remember">
+            <label>
+                <input type="checkbox" name="remember" value="true"> Ghi nhớ tài khoản
+            </label>
+        </div>
+
+        <button type="submit">Đăng nhập</button>
+    </form>
+
+    <hr>
+    <a href="/item/index">⬅ Quay lại danh sách sản phẩm</a>
+</div>
+</body>
+</html>
