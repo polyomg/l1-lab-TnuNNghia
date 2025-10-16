@@ -23,7 +23,6 @@ public class CategoryController {
         model.addAttribute("items", items);
         return "category/index";
     }
-
     @RequestMapping("/category/edit/{id}")
     public String edit(Model model, @PathVariable("id") String id) {
         Category item = dao.findById(id).get();
@@ -31,19 +30,16 @@ public class CategoryController {
         model.addAttribute("items", dao.findAll());
         return "category/index";
     }
-
     @RequestMapping("/category/create")
     public String create(Category item) {
         dao.save(item);
         return "redirect:/category/index";
     }
-
     @RequestMapping("/category/update")
     public String update(Category item) {
         dao.save(item);
         return "redirect:/category/edit/" + item.getId();
     }
-
     @RequestMapping("/category/delete/{id}")
     public String delete(@PathVariable("id") String id) {
         dao.deleteById(id);
