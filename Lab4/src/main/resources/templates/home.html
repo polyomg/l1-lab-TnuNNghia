@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout :: view(~{::title}, ~{::content})}">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Trang Chủ</title>
+</head>
+<body>
+<article th:fragment="content">
+    <h1 th:text="#{menu.home}">Trang Chủ</h1>
+    <img th:src="@{/photo.jpg}" style="width: 150px"  alt="photo"/>
+</article>
+</body>
+</html>
